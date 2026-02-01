@@ -35,7 +35,7 @@ indiadatahub/
 ├── package.json         # Project dependencies
 └── vite.config.js       # Vite configuration
 
-## Getting Started (Local Setup)
+Getting Started (Local Setup)
 1. Clone the Repo -> git clone https://github.com/Sumit01-tech/React-Assignment-for-IndiaDataHub.git
 2. Install React+Vite -> npm install Vite@latest indiadatahub
 3. Start Development Server -> npm run dev
