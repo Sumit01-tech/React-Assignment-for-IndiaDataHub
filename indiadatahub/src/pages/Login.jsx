@@ -24,7 +24,6 @@ const Login = () => {
                 </div>
                 <h1 className="text-[24px] font-normal text-gray-800 mb-10">Sign in</h1>
 
-                {/* Adjusted gap from 6 to 4 for a tighter look */}
                 <form className="w-full max-w-sm flex flex-col gap-4" onSubmit={handleSubmit}>
                     <input
                         type="email"
@@ -42,12 +41,11 @@ const Login = () => {
                     />
                     <button
                         type="submit"
-                        className="w-full py-3 bg-black text-white text-[14px] font-medium rounded shadow hover:bg-gray-800 uppercase tracking-wide"
+                        className="w-full py-3 bg-black text-white text-[14px] font-medium rounded shadow hover:bg-gray-800 tracking-wide"
                     >
                         Sign In
                     </button>
 
-                    {/* Reduced margin-top (mt) from 6 to 2 */}
                     <div className="flex justify-between items-center mt-2">
                         <a href="#" style={{ color: THEME.linkBlue }} className="text-[13px] hover:underline">
                             Forgot password?
