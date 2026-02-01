@@ -13,7 +13,7 @@ const Navbar = ({ isLoginPage }) => {
                         ></div>
                     </div>
                     <div className="flex flex-col -space-y-1">
-                        <span className="text-[17px] font-bold italic tracking-tight leading-tight">
+                        <span className="text-[17px] font-bold tracking-tight leading-tight">
                             IndiaDataHub
                         </span>
                         <span className="text-[8.5px] text-white/50 font-light tracking-wide">
