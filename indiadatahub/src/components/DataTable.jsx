@@ -1,8 +1,7 @@
-import React from 'react';
 import { Bookmark, PlusSquare, Bell, MoreVertical } from 'lucide-react';
 
 const DataTable = ({ data, totalCount }) => {
-    const EXACT_HEADER_COLOR = "#7c7db1";
+    const PRIMARY_HEADER_COLOR = "#334155";
 
     const getDynamicRange = (freq) => {
         if (freq === 'Daily') return '01 Jan 2024 - 31 Jan 2024';
@@ -35,20 +34,19 @@ const DataTable = ({ data, totalCount }) => {
                 <table className="w-full text-left border-collapse">
                     <thead>
                         <tr className="bg-white border-b border-slate-100">
-                            {/* Each header uses the EXACT color #7c7db1 and Sentence Case */}
-                            <th className="px-6 py-5 text-[13px] font-normal w-2/5" style={{ color: EXACT_HEADER_COLOR }}>
-                                New Releases <span className="text-indigo-400 font-semibold ml-1">({totalCount})</span>
+                            <th className="px-6 py-5 text-[12px] font-bold tracking-tight w-2/5" style={{ color: PRIMARY_HEADER_COLOR }}>
+                                New Releases <span className="text-indigo-500 ml-1">({totalCount})</span>
                             </th>
-                            <th className="px-6 py-5 text-[13px] font-normal" style={{ color: EXACT_HEADER_COLOR }}>
+                            <th className="px-6 py-5 text-[11px] font-bold uppercase tracking-wider" style={{ color: PRIMARY_HEADER_COLOR }}>
                                 Range
                             </th>
-                            <th className="px-6 py-5 text-[13px] font-normal" style={{ color: EXACT_HEADER_COLOR }}>
+                            <th className="px-6 py-5 text-[11px] font-bold uppercase tracking-wider" style={{ color: PRIMARY_HEADER_COLOR }}>
                                 Unit
                             </th>
-                            <th className="px-6 py-5 text-[13px] font-normal" style={{ color: EXACT_HEADER_COLOR }}>
+                            <th className="px-6 py-5 text-[11px] font-bold uppercase tracking-wider" style={{ color: PRIMARY_HEADER_COLOR }}>
                                 Coverage
                             </th>
-                            <th className="px-6 py-5 text-[13px] font-normal text-center" style={{ color: EXACT_HEADER_COLOR }}>
+                            <th className="px-6 py-5 text-[11px] font-bold uppercase tracking-wider text-center" style={{ color: PRIMARY_HEADER_COLOR }}>
                                 Actions
                             </th>
                         </tr>
@@ -80,10 +78,11 @@ const DataTable = ({ data, totalCount }) => {
                                 </td>
                                 <td className="px-6 py-4 text-center">
                                     <div className="flex items-center justify-center gap-5 text-slate-300">
-                                        <Bookmark size={16} className="hover:text-indigo-500 cursor-pointer" />
-                                        <PlusSquare size={16} className="hover:text-indigo-500 cursor-pointer" />
-                                        <Bell size={16} className="hover:text-indigo-500 cursor-pointer" />
-                                        <MoreVertical size={16} className="hover:text-indigo-500 cursor-pointer" />
+                                        {/* Icons now start as slate-300 and turn indigo-500 only on hover */}
+                                        <Bookmark size={16} className="hover:text-indigo-500 cursor-pointer transition-colors" />
+                                        <PlusSquare size={16} className="hover:text-indigo-500 cursor-pointer transition-colors" />
+                                        <Bell size={16} className="hover:text-indigo-500 cursor-pointer transition-colors" />
+                                        <MoreVertical size={16} className="hover:text-indigo-500 cursor-pointer transition-colors" />
                                     </div>
                                 </td>
                             </tr>
