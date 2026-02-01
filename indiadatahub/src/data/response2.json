@@ -1,0 +1,96 @@
+{
+  "categories": [
+    "Africa",
+    "Americas",
+    "Asia",
+    "Australasia",
+    "Country Groups",
+    "Europe"
+  ],
+  "frequent": [
+    {
+      "id": "IMFWEOEMPL00A:AUS",
+      "db": "IMF",
+      "title": "Number of People Employed",
+      "cat": "Labour Market",
+      "subCat": "Employment",
+      "freq": "Annual",
+      "unit": "Number",
+      "src": "IMF",
+      "datatype": "N",
+      "region": "AUS"
+    },
+    {
+      "id": "IMFWEOEMPL00A:CAN",
+      "db": "IMF",
+      "title": "Number of People Employed",
+      "cat": "Labour Market",
+      "subCat": "Employment",
+      "freq": "Annual",
+      "unit": "Number",
+      "src": "IMF",
+      "datatype": "N",
+      "region": "CAN"
+    },
+    {
+      "id": "IMFWEOEMPR00A:USA",
+      "db": "IMF",
+      "title": "Unemployment Rate",
+      "cat": "Labour Market",
+      "subCat": "Employment",
+      "freq": "Annual",
+      "unit": "Percentage",
+      "src": "IMF",
+      "datatype": "N",
+      "region": "USA"
+    },
+    {
+      "id": "IMFWEOEMPR00A:CHN",
+      "db": "IMF",
+      "title": "Unemployment Rate",
+      "cat": "Labour Market",
+      "subCat": "Employment",
+      "freq": "Annual",
+      "unit": "Percentage",
+      "src": "IMF",
+      "datatype": "N",
+      "region": "CHN"
+    },
+    {
+      "id": "IMFWEOEMPR00A:GBR",
+      "db": "IMF",
+      "title": "Unemployment Rate",
+      "cat": "Labour Market",
+      "subCat": "Employment",
+      "freq": "Annual",
+      "unit": "Percentage",
+      "src": "IMF",
+      "datatype": "N",
+      "region": "GBR"
+    },
+    {
+      "id": "IMFWEOEMPR00A:EUR",
+      "db": "IMF",
+      "title": "Unemployment Rate",
+      "cat": "Labour Market",
+      "subCat": "Employment",
+      "freq": "Annual",
+      "unit": "Percentage",
+      "src": "IMF",
+      "datatype": "N",
+      "region": "EUR"
+    },
+    {
+      "id": "IMFWEOEMPR00A:IND",
+      "db": "IMF",
+      "title": "Unemployment Rate",
+      "cat": "Labour Market",
+      "subCat": "Employment",
+      "freq": "Annual",
+      "unit": "Percentage",
+      "src": "IMF",
+      "datatype": "N",
+      "region": "IND"
+    }
+  ]
+}
