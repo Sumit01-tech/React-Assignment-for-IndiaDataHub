@@ -24,7 +24,8 @@ const Login = () => {
                 </div>
                 <h1 className="text-[24px] font-normal text-gray-800 mb-10">Sign in</h1>
 
-                <form className="w-full max-w-sm flex flex-col gap-6" onSubmit={handleSubmit}>
+                {/* Adjusted gap from 6 to 4 for a tighter look */}
+                <form className="w-full max-w-sm flex flex-col gap-4" onSubmit={handleSubmit}>
                     <input
                         type="email"
                         placeholder="Email address *"
@@ -45,9 +46,15 @@ const Login = () => {
                     >
                         Sign In
                     </button>
-                    <div className="flex justify-between items-center mt-6">
-                        <a href="#" style={{ color: THEME.linkBlue }} className="text-[13px] hover:underline">Forgot password?</a>
-                        <a href="#" style={{ color: THEME.linkBlue }} className="text-[13px] hover:underline">Don't have an account? Sign Up</a>
+
+                    {/* Reduced margin-top (mt) from 6 to 2 */}
+                    <div className="flex justify-between items-center mt-2">
+                        <a href="#" style={{ color: THEME.linkBlue }} className="text-[13px] hover:underline">
+                            Forgot password?
+                        </a>
+                        <a href="#" style={{ color: THEME.linkBlue }} className="text-[13px] hover:underline">
+                            Don't have an account? Sign Up
+                        </a>
                     </div>
                 </form>
             </div>
