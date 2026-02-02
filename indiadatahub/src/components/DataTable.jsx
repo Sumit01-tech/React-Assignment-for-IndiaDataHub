@@ -1,4 +1,5 @@
-import { Bookmark, PlusSquare, Bell, MoreVertical } from 'lucide-react';
+import React from 'react';
+import { Bookmark, PlusSquare, Tag, MoreVertical } from 'lucide-react';
 
 const DataTable = ({ data, totalCount }) => {
     const PRIMARY_HEADER_COLOR = "#334155";
@@ -17,10 +18,9 @@ const DataTable = ({ data, totalCount }) => {
         else if (item.db === 'IMF') badges.push({ char: 'N', color: 'bg-emerald-50 text-emerald-600 border-emerald-100' });
         if (item.freq === 'Daily') badges.push({ char: 'D', color: 'bg-blue-50 text-blue-500 border-blue-100' });
         if (item.freq === 'Monthly') badges.push({ char: 'M', color: 'bg-purple-50 text-purple-500 border-purple-100' });
-        badges.push({ char: 'X', color: 'bg-orange-50 text-orange-500 border-orange-100' });
 
         return badges.map((b, i) => (
-            <span key={i} className={`w-5 h-5 flex items-center justify-center text-[10px] font-bold rounded-sm border ${b.color}`}>
+            <span key={i} className={`w-5 h-5 flex items-center justify-center text-[10px] font-normal rounded-sm border ${b.color}`}>
                 {b.char}
             </span>
         ));
@@ -31,22 +31,22 @@ const DataTable = ({ data, totalCount }) => {
     return (
         <div className="w-full bg-white overflow-hidden">
             <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse">
+                <table className="w-full text-left border-collapse table-fixed">
                     <thead>
                         <tr className="bg-white border-b border-slate-100">
-                            <th className="px-6 py-5 text-[12px] font-bold tracking-tight w-2/5" style={{ color: PRIMARY_HEADER_COLOR }}>
+                            <th className="px-6 py-5 text-[12px] font-bold tracking-tight w-[45%]" style={{ color: PRIMARY_HEADER_COLOR }}>
                                 New Releases <span className="text-indigo-500 ml-1">({totalCount})</span>
                             </th>
-                            <th className="px-6 py-5 text-[11px] font-bold uppercase tracking-wider" style={{ color: PRIMARY_HEADER_COLOR }}>
+                            <th className="px-6 py-5 text-[11px] font-bold tracking-wider w-[15%]" style={{ color: PRIMARY_HEADER_COLOR }}>
                                 Range
                             </th>
-                            <th className="px-6 py-5 text-[11px] font-bold uppercase tracking-wider" style={{ color: PRIMARY_HEADER_COLOR }}>
+                            <th className="px-6 py-5 text-[11px] font-bold tracking-wider w-[10%]" style={{ color: PRIMARY_HEADER_COLOR }}>
                                 Unit
                             </th>
-                            <th className="px-6 py-5 text-[11px] font-bold uppercase tracking-wider" style={{ color: PRIMARY_HEADER_COLOR }}>
+                            <th className="px-6 py-5 text-[11px] font-bold tracking-wider w-[12%]" style={{ color: PRIMARY_HEADER_COLOR }}>
                                 Coverage
                             </th>
-                            <th className="px-6 py-5 text-[11px] font-bold uppercase tracking-wider text-center" style={{ color: PRIMARY_HEADER_COLOR }}>
+                            <th className="px-6 py-5 text-[11px] font-bold tracking-wider w-[18%]" style={{ color: PRIMARY_HEADER_COLOR }}>
                                 Actions
                             </th>
                         </tr>
@@ -55,11 +55,13 @@ const DataTable = ({ data, totalCount }) => {
                         {data.map((item, index) => (
                             <tr key={item.id || index} className={`group ${index % 2 !== 0 ? 'bg-[#f8faff]' : 'bg-white'} hover:bg-slate-50 transition-colors`}>
                                 <td className="px-6 py-4">
-                                    <div className="flex flex-col">
-                                        <span className="text-[13px] font-semibold text-slate-700 leading-snug">{item.title}</span>
-                                        <span className="text-[10px] text-blue-500 font-bold uppercase mt-1 tracking-tight">
-                                            {item.cat} {item.subCat ? `• ${item.subCat}` : ''}
+                                    <div className="flex flex-col items-start gap-1.5">
+                                        <span className="text-[13px] font-semibold text-slate-700 leading-tight">
+                                            {item.title}
                                         </span>
+                                        <div className="inline-flex bg-[#e0f2fe] text-[#0ea5e9] text-[10.5px] font-normal px-2 py-0.5 rounded-sm tracking-tight">
+                                            {item.cat}{item.subCat ? ` / ${item.subCat}` : ''}
+                                        </div>
                                     </div>
                                 </td>
                                 <td className="px-6 py-4">
@@ -76,13 +78,12 @@ const DataTable = ({ data, totalCount }) => {
                                         {renderCoverageBadges(item)}
                                     </div>
                                 </td>
-                                <td className="px-6 py-4 text-center">
-                                    <div className="flex items-center justify-center gap-5 text-slate-300">
-                                        {/* Icons now start as slate-300 and turn indigo-500 only on hover */}
-                                        <Bookmark size={16} className="hover:text-indigo-500 cursor-pointer transition-colors" />
-                                        <PlusSquare size={16} className="hover:text-indigo-500 cursor-pointer transition-colors" />
-                                        <Bell size={16} className="hover:text-indigo-500 cursor-pointer transition-colors" />
-                                        <MoreVertical size={16} className="hover:text-indigo-500 cursor-pointer transition-colors" />
+                                <td className="px-6 py-4">
+                                    <div className="flex items-center gap-5 text-slate-300">
+                                        <Bookmark size={16} className="hover:text-indigo-600 cursor-pointer transition-colors" />
+                                        <PlusSquare size={16} className="hover:text-indigo-600 cursor-pointer transition-colors" />
+                                        <Tag size={16} className="hover:text-indigo-600 cursor-pointer transition-colors" />
+                                        <MoreVertical size={16} className="hover:text-slate-600 cursor-pointer transition-colors" />
                                     </div>
                                 </td>
                             </tr>

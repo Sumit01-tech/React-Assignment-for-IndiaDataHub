@@ -1,4 +1,3 @@
-import React from 'react';
 import { Search, ChevronDown, LogIn } from 'lucide-react';
 
 const Navbar = ({ isLoginPage }) => {
@@ -25,7 +24,7 @@ const Navbar = ({ isLoginPage }) => {
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                     <input
                         type="text"
-                        placeholder="Search for indicators..."
+                        placeholder="Search"
                         className="w-full bg-white text-slate-800 text-[13px] py-1.5 pl-10 pr-4 rounded-sm outline-none"
                     />
                 </div>

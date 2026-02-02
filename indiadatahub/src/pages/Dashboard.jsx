@@ -6,7 +6,12 @@ import DataTable from '../components/DataTable';
 import Pagination from '../components/Pagination';
 import Navbar from '../components/Navbar';
 import {
-    Search, Bookmark, Filter, Grid, Share2, LineChart
+    Search,
+    Bookmark,
+    Filter,
+    ShoppingCart,
+    Tag,
+    LineChart
 } from 'lucide-react';
 
 const Dashboard = () => {
@@ -30,7 +35,6 @@ const Dashboard = () => {
 
     return (
         <div className="flex flex-col h-screen bg-white overflow-hidden font-sans">
-
             <Navbar isLoginPage={false} />
 
             <div className="flex flex-1 overflow-hidden">
@@ -51,17 +55,21 @@ const Dashboard = () => {
                         <div className="bg-white p-2 rounded border border-indigo-100 shadow-sm flex items-center justify-center hover:bg-slate-50 cursor-pointer">
                             <Filter size={15} className="text-slate-500" />
                         </div>
+
                         <div className="bg-white px-3 py-2 rounded border border-indigo-100 shadow-sm flex items-center justify-center">
                             <span className="text-[10px] font-bold text-slate-400 uppercase whitespace-nowrap">
                                 Selected (0)
                             </span>
                         </div>
+
                         <div className="bg-white p-2 rounded border border-indigo-100 shadow-sm flex items-center justify-center hover:bg-slate-50 cursor-pointer">
-                            <Grid size={15} className="text-slate-500" />
+                            <ShoppingCart size={15} className="text-slate-500" />
                         </div>
+
                         <div className="bg-white p-2 rounded border border-indigo-100 shadow-sm flex items-center justify-center hover:bg-slate-50 cursor-pointer">
-                            <Share2 size={15} className="text-slate-500" />
+                            <Tag size={15} className="text-slate-500" />
                         </div>
+
                         <button className="bg-[#1e1b4b] text-white text-[10px] font-bold uppercase tracking-widest px-5 py-2.5 rounded flex items-center gap-2 hover:bg-black transition-all shadow-md ml-1">
                             <LineChart size={14} className="stroke-[3px]" />
                             View Graph
