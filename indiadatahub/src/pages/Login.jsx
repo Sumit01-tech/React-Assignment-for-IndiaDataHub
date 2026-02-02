@@ -47,10 +47,19 @@ const Login = () => {
                     </button>
 
                     <div className="flex justify-between items-center mt-2">
-                        <a href="#" style={{ color: THEME.linkBlue }} className="text-[13px] hover:underline">
+                        {/* Updated: Added 'underline' class and removed 'hover:underline' */}
+                        <a
+                            href="#"
+                            style={{ color: THEME.linkBlue }}
+                            className="text-[13px] underline decoration-1 underline-offset-2"
+                        >
                             Forgot password?
                         </a>
-                        <a href="#" style={{ color: THEME.linkBlue }} className="text-[13px] hover:underline">
+                        <a
+                            href="#"
+                            style={{ color: THEME.linkBlue }}
+                            className="text-[13px] underline decoration-1 underline-offset-2"
+                        >
                             Don't have an account? Sign Up
                         </a>
                     </div>
