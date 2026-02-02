@@ -3,7 +3,7 @@
 A high-performance React application built with Vite, featuring a secure login gateway and a dynamic product catalogue. This project handles large datasets efficiently using memoization and local pagination.
 
 ## 🔗 Project Links
-- **Live Demo:** [Deploy Link Here](https://react-assignment-for-india-data-hub-theta.vercel.app/)
+- **Live Demo:** [Deploy Link Here](https://react-assignment-for-india-data-hub.vercel.app/)
 - **Repository:** [GitHub Repo Link Here](https://github.com/Sumit01-tech/React-Assignment-for-IndiaDataHub.git)
 
 ## 🛠️ Tech Stack
