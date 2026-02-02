@@ -35,7 +35,7 @@ const Navbar = ({ isLoginPage }) => {
                     <ChevronDown size={12} />
                 </div>
                 <div className="cursor-pointer hover:text-white transition-colors">
-                    <span>Calendar</span>
+                    <span>Calender</span>
                 </div>
                 <div className="cursor-pointer hover:text-white transition-colors">
                     <span>Help</span>
