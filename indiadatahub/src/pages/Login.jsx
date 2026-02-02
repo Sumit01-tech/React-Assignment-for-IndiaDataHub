@@ -47,7 +47,6 @@ const Login = () => {
                     </button>
 
                     <div className="flex justify-between items-center mt-2">
-                        {/* Updated: Added 'underline' class and removed 'hover:underline' */}
                         <a
                             href="#"
                             style={{ color: THEME.linkBlue }}
