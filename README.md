@@ -43,8 +43,6 @@ The app will be running at http://localhost:5173
 4. Build for Production -> npm run build
 
 ⚡ Performance Features
-Data Memoization: Utilizes useMemo to handle large IMF datasets, ensuring the UI remains responsive during sorting and filtering.
-
-Efficient Pagination: Implements logic to load and render only 10 records at a time, drastically reducing DOM nodes and memory usage.
-
-Modular Architecture: Shared Navbar uses conditional rendering via props to maintain UI consistency between Login and Dashboard without code duplication.
+1. Data Memoization: Utilizes useMemo to handle large IMF datasets, ensuring the UI remains responsive during sorting and filtering.
+2. Efficient Pagination: Implements logic to load and render only 10 records at a time, drastically reducing DOM nodes and memory usage.
+3. Modular Architecture: Shared Navbar uses conditional rendering via props to maintain UI consistency between Login and Dashboard without code duplication.
